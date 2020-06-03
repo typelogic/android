@@ -1,11 +1,14 @@
 FROM circleci/android:api-29-ndk
 MAINTAINER dexter@newlogic.io
 
+ENV API_LEVEL 29
 ENV project $HOME/project/
 ENV build $project/build/
 ENV libheaders $project/libheaders/
-ENV platform android-29
+ENV platform android-$API_LEVEL
 ENV toolchain $HOME/toolchain/
+
+ENV TOOLCHAIN_FILE $ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake
 
 WORKDIR /tmp/
 
