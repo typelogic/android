@@ -2,7 +2,8 @@ FROM circleci/android:api-29-ndk
 MAINTAINER dexter@newlogic.io
 
 ENV project $HOME/project/
-ENV build $HOME/build/
+ENV build $project/build/
+ENV libheaders $project/libheaders/
 ENV platform android-29
 ENV toolchain $HOME/toolchain/
 
