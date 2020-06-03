@@ -1,9 +1,10 @@
 FROM circleci/android:api-29-ndk
 MAINTAINER dexter@newlogic.io
 
-ENV basedir $HOME/project
+ENV project $HOME/project/
+ENV build $HOME/build/
 ENV platform android-29
-ENV toolchain $HOME/toolchain
+ENV toolchain $HOME/toolchain/
 
 WORKDIR /tmp/
 
